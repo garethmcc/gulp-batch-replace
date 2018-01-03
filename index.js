@@ -6,27 +6,7 @@ module.exports = function(arr) {
 
     var isStream = file.contents && typeof file.contents.on === 'function' && typeof file.contents.pipe === 'function';
     var isBuffer = file.contents instanceof Buffer;
-
-
-    if (isStream)
-    {
-      file.contents = file.contents.pipe(es.map(function(chunk,cb){
-        for( var i=0, max = arr.length; i<max; i++ ){
-          var search  = arr[i][0],
-              replace = arr[i][1];
-
-          var isRegExp = search instanceof RegExp;
-
-          var result = isRegExp
-          ? String( chunk ).replace( search, replace )
-          : String( chunk ).split( search ).join( replace );
-          chunk = new Buffer(result);
-        };
-        cb(null,chunk);
-      }));
-    }
-
-    else if(isBuffer)
+    if(isBuffer)
 
     {
       for( var i=0, max = arr.length; i<max; i++ ){
