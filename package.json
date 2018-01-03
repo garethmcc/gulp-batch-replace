@@ -1,7 +1,7 @@
 {
-  "name": "gulp-batch-replace",
+  "name": "gulp-batch-replace-buffer",
   "version": "0.0.0",
-  "description": "A batch string/regexp replace plugin for gulp",
+  "description": "A batch string/regexp replace plugin for gulp, edited to only support buffers not streams",
   "main": "index.js",
   "dependencies": {
   },
@@ -28,7 +28,7 @@
   "author": "Michael Ostermann <metrime@icloud.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Metrime/gulp-batch-replace/issues"
+    "url": "https://github.com/garethmcc/gulp-batch-replace/issues"
   },
   "engines": {
     "node": ">=0.8"

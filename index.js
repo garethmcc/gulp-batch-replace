@@ -1,5 +1,3 @@
-var es = require('event-stream');
-
 module.exports = function(arr) {
   var doReplace = function(file, callback) {
 
